@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter_music/features/data/models/music_model.dart';
 import 'package:flutter_music/features/domain/entities/music_entity.dart';
 import 'package:flutter_test/flutter_test.dart';
-import '../../../mocks/music_mock.dart';
+import '../../mocks/music_mock.dart';
 
 void main() {
   const tMusicModel = MusicModel(

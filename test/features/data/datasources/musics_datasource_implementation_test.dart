@@ -6,7 +6,7 @@ import 'package:flutter_music/features/data/models/music_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../../../mocks/music_mock.dart';
+import '../../mocks/music_mock.dart';
 
 class HttpClientMock extends Mock implements HttpClient {}
 
