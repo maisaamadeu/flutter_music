@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_music/core/usecase/errors/failure.dart';
+import 'package:flutter_music/core/usecase/errors/failures.dart';
 import 'package:flutter_music/core/usecase/usecase.dart';
 import 'package:flutter_music/features/domain/entities/music_entity.dart';
 import 'package:flutter_music/features/domain/repositories/musics_repository.dart';
@@ -18,13 +18,15 @@ void main() {
     usecase = GetMusicsUsecase(repository: repository);
   });
 
-  final tMusics = [
+  final tListMusicEntity = [
     const MusicEntity(
-        title:
-            'Rap Da Akatsuki: Os Ninjas Mais Procurados Do Mundo (Nerd Hits)',
-        artist: '7 Minutoz',
-        audioFileUrl: '',
-        albumCoverImageUrl: ''),
+      title: 'Rap Da Akatsuki: Os Ninjas Mais Procurados Do Mundo (Nerd Hits)',
+      artist: '7 Minutoz',
+      audioFileUrl:
+          "https://parsefiles.back4app.com/nFhvCrsQLQ940EHEENDDDHQa6quzirVVwAolqaVM/d318693715d44e4386602e1380274af2_music.mp3",
+      albumCoverImageUrl:
+          "https://parsefiles.back4app.com/nFhvCrsQLQ940EHEENDDDHQa6quzirVVwAolqaVM/09bbf81f2fc834156121092d13806692_image.jpg",
+    ),
   ];
 
   final tNoParams = NoParams();
@@ -32,26 +34,26 @@ void main() {
   test(
     'should get musics from the repository',
     () async {
-      when(() => repository.getMusics()).thenAnswer(
-        (_) async => Right(tMusics),
+      when(() => repository.getAllMusics()).thenAnswer(
+        (_) async => Right(tListMusicEntity),
       );
       final result = await usecase(tNoParams);
-      expect(result, Right(tMusics));
-      verify(() => repository.getMusics());
+      expect(result, Right(tListMusicEntity));
+      verify(() => repository.getAllMusics());
     },
   );
 
   test(
     "should return a ServerFailure when don't succeed",
     () async {
-      when(() => repository.getMusics())
+      when(() => repository.getAllMusics())
           .thenAnswer((_) async => Left(ServerFailure()));
       final result = await usecase(tNoParams);
       expect(
         result,
         Left(ServerFailure()),
       );
-      verify(() => repository.getMusics());
+      verify(() => repository.getAllMusics());
     },
   );
 }
