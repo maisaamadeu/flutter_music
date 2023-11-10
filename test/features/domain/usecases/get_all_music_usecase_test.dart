@@ -3,19 +3,19 @@ import 'package:flutter_music/core/usecase/errors/failures.dart';
 import 'package:flutter_music/core/usecase/usecase.dart';
 import 'package:flutter_music/features/domain/entities/music_entity.dart';
 import 'package:flutter_music/features/domain/repositories/musics_repository.dart';
-import 'package:flutter_music/features/domain/usecases/get_musics_usecase.dart';
+import 'package:flutter_music/features/domain/usecases/get_all_musics_usecase.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockMusicsRepository extends Mock implements IMusicsRepository {}
 
 void main() {
-  late GetMusicsUsecase usecase;
+  late GetAllMusicsUsecase usecase;
   late IMusicsRepository repository;
 
   setUp(() {
     repository = MockMusicsRepository();
-    usecase = GetMusicsUsecase(repository: repository);
+    usecase = GetAllMusicsUsecase(repository: repository);
   });
 
   final tListMusicEntity = [

@@ -20,7 +20,7 @@ void main() {
   });
 
   test('should return a valid model', () async {
-    final Map<String, dynamic> jsonMap = json.decode(musicMock);
+    final Map<String, dynamic> jsonMap = json.decode(musicMock)['result'][0];
     final result = MusicModel.fromJson(jsonMap);
     expect(tMusicModel, result);
   });
