@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_music/core/usecase/errors/failures.dart';
 import 'package:flutter_music/core/usecase/usecase.dart';
-import 'package:flutter_music/features/domain/repositories/musics_repository.dart';
 import 'package:flutter_music/features/domain/usecases/get_all_musics_usecase.dart';
 import 'package:flutter_music/features/presenter/controllers/home_store.dart';
 import 'package:flutter_test/flutter_test.dart';

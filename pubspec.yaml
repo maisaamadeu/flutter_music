@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_triple: ^3.0.0
+  google_fonts: ^6.1.0
   http: ^1.1.0
   mocktail: ^1.0.1
 
