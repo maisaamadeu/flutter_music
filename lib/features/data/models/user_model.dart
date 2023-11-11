@@ -3,7 +3,7 @@ import 'package:flutter_music/features/domain/entities/user_entity.dart';
 class UserModel extends UserEntity {
   const UserModel({
     required super.id,
-    required super.usename,
+    required super.username,
     required super.email,
     required super.token,
   });
@@ -11,7 +11,7 @@ class UserModel extends UserEntity {
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
       id: json['id'] as String,
-      usename: json['usename'] as String,
+      username: json['username'] as String,
       email: json['email'] as String,
       token: json['token'] as String,
     );
@@ -20,7 +20,7 @@ class UserModel extends UserEntity {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'usename': usename,
+      'username': username,
       'email': email,
       'token': token,
     };

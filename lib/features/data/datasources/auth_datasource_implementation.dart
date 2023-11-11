@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_music/core/http_client/http_client.dart';
 import 'package:flutter_music/core/usecase/errors/exceptions.dart';
 import 'package:flutter_music/features/data/datasources/auth_datasource.dart';
@@ -17,7 +19,7 @@ class AuthDatasourceImplementation implements IAuthDatasource {
       "password": password,
     });
     if (response.statusCode == 200) {
-      final user = UserModel.fromJson(response.data['result']);
+      final user = UserModel.fromJson(json.decode(response.data)['result']);
 
       return user;
     } else {
@@ -30,13 +32,13 @@ class AuthDatasourceImplementation implements IAuthDatasource {
       {required String username,
       required String email,
       required String password}) async {
-    final response = await client.post(Back4appEndpoints.signin, map: {
+    final response = await client.post(Back4appEndpoints.signup, map: {
       "username": username,
       "email": email,
       "password": password,
     });
     if (response.statusCode == 200) {
-      final user = UserModel.fromJson(response.data['result']);
+      final user = UserModel.fromJson(json.decode(response.data)['result']);
 
       return user;
     } else {
