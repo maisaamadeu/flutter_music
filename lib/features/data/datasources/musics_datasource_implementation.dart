@@ -5,6 +5,9 @@ import 'package:flutter_music/core/usecase/errors/exceptions.dart';
 import 'package:flutter_music/features/data/datasources/endpoints/back4app_endpoints.dart';
 import 'package:flutter_music/features/data/datasources/musics_datasource.dart';
 import 'package:flutter_music/features/data/models/music_model.dart';
+import 'package:flutter_music/features/data/models/playlist_model.dart';
+import 'package:flutter_music/features/domain/entities/playlist_entity.dart';
+import 'package:flutter_music/features/domain/entities/user_entity.dart';
 
 class MusicsDatasourceImplementation implements IMusicsDatasource {
   final HttpClient client;
@@ -25,5 +28,18 @@ class MusicsDatasourceImplementation implements IMusicsDatasource {
     } else {
       throw ServerException();
     }
+  }
+
+  @override
+  Future<List<PlaylistModel>> getAllPlaylistsByUser(
+      {required UserEntity user}) {
+    // TODO: implement getAllPlaylistsByUser
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<List<PlaylistModel>> getPlaylistsById({required String id}) {
+    // TODO: implement getPlaylistsById
+    throw UnimplementedError();
   }
 }
