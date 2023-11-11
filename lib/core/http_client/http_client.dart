@@ -1,6 +1,7 @@
 abstract class HttpClient {
   Future<HttpResponse> get(String url);
-  Future<HttpResponse> post(String url, {required Map<String, dynamic> map});
+  Future<HttpResponse> post(String url,
+      {required Map<String, dynamic> map, String? token});
 }
 
 class HttpResponse {

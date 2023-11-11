@@ -14,13 +14,14 @@ class HttpImplementation implements HttpClient {
 
   @override
   Future<HttpResponse> post(String url,
-      {required Map<String, dynamic> map}) async {
+      {required Map<String, dynamic> map, String? token}) async {
     final response = await client.post(
       Uri.parse(url),
       headers: <String, String>{
         'Content-Type': 'application/json',
         'X-Parse-Application-Id': Back4appApiKeys.xParseApplicationId,
         'X-Parse-REST-API-Key': Back4appApiKeys.xParseRestApiKey,
+        'X-Parse-Session-Token': token ?? '',
       },
       body: jsonEncode(map),
     );

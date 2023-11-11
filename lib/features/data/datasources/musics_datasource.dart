@@ -5,5 +5,5 @@ import 'package:flutter_music/features/domain/entities/user_entity.dart';
 abstract class IMusicsDatasource {
   Future<List<MusicModel>> getAllMusics();
   Future<List<PlaylistModel>> getAllPlaylistsByUser({required UserEntity user});
-  Future<List<PlaylistModel>> getPlaylistsById({required String id});
+  Future<PlaylistModel> getPlaylistsById({required String id});
 }

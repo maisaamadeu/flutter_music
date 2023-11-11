@@ -2,11 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_music/core/usecase/errors/exceptions.dart';
 import 'package:flutter_music/core/usecase/errors/failures.dart';
 import 'package:flutter_music/features/data/datasources/auth_datasource.dart';
-import 'package:flutter_music/features/data/datasources/musics_datasource.dart';
-import 'package:flutter_music/features/data/models/music_model.dart';
 import 'package:flutter_music/features/data/models/user_model.dart';
 import 'package:flutter_music/features/data/repositories/auth_repository_implementation.dart';
-import 'package:flutter_music/features/data/repositories/musics_repository_implementation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
