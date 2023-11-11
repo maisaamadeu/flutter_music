@@ -1,5 +1,4 @@
 import 'package:flutter_music/features/data/models/music_model.dart';
-import 'package:flutter_music/features/data/models/user_model.dart';
 import 'package:flutter_music/features/domain/entities/playlist_entity.dart';
 
 class PlaylistModel extends PlaylistEntity {

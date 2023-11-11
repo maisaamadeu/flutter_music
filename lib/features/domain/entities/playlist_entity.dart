@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_music/features/domain/entities/music_entity.dart';
-import 'package:flutter_music/features/domain/entities/user_entity.dart';
 
 class PlaylistEntity extends Equatable {
   final String id;

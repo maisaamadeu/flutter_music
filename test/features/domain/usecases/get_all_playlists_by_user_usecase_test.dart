@@ -3,19 +3,19 @@ import 'package:flutter_music/core/usecase/errors/failures.dart';
 import 'package:flutter_music/features/domain/entities/music_entity.dart';
 import 'package:flutter_music/features/domain/entities/playlist_entity.dart';
 import 'package:flutter_music/features/domain/entities/user_entity.dart';
-import 'package:flutter_music/features/domain/repositories/musics_repository.dart';
+import 'package:flutter_music/features/domain/repositories/playlists_repostiory.dart';
 import 'package:flutter_music/features/domain/usecases/get_all_playlists_by_user_usecase.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-class MockMusicsRepository extends Mock implements IMusicsRepository {}
+class MockPlaylistsRepository extends Mock implements IPlaylistsRepository {}
 
 void main() {
   late GetAllPlaylistsByUserUsecase usecase;
-  late IMusicsRepository repository;
+  late IPlaylistsRepository repository;
 
   setUp(() {
-    repository = MockMusicsRepository();
+    repository = MockPlaylistsRepository();
     usecase = GetAllPlaylistsByUserUsecase(repository: repository);
   });
 

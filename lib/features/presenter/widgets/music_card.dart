@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_music/features/data/models/music_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -91,8 +90,8 @@ class MusicCard extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(999),
                 ),
-                shadows: [
-                  const BoxShadow(
+                shadows: const [
+                  BoxShadow(
                     color: Color(0x19000000),
                     blurRadius: 5.50,
                     offset: Offset(0, 2.20),

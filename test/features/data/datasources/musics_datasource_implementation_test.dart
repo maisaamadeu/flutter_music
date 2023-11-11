@@ -48,7 +48,7 @@ void main() {
     verify(() => client.post(urlExpected, map: {})).called(1);
   });
 
-  test('should return a List SpaceMediaModel when is successful', () async {
+  test('should return a List MusicModel when is successful', () async {
     // Arrange
     successMock();
     // Act

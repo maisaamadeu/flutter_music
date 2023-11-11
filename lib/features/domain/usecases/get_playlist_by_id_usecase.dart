@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_music/core/usecase/errors/failures.dart';
 import 'package:flutter_music/core/usecase/usecase.dart';
 import 'package:flutter_music/features/domain/entities/playlist_entity.dart';
-import 'package:flutter_music/features/domain/repositories/musics_repository.dart';
+import 'package:flutter_music/features/domain/repositories/playlists_repostiory.dart';
 
 class GetPlaylistByIdUsecase implements Usecase<PlaylistEntity, String> {
-  final IMusicsRepository repository;
+  final IPlaylistsRepository repository;
 
   GetPlaylistByIdUsecase({required this.repository});
 

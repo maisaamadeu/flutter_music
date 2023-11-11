@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_music/features/data/models/music_model.dart';
 import 'package:flutter_music/features/presenter/widgets/drawer_item.dart';
-import 'package:flutter_music/features/presenter/widgets/music_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,7 +27,7 @@ class HomePage extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    color: Color(0xff212124),
+                    color: const Color(0xff212124),
                     child: Flexible(
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),

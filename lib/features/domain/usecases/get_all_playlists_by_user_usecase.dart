@@ -3,11 +3,11 @@ import 'package:flutter_music/core/usecase/errors/failures.dart';
 import 'package:flutter_music/core/usecase/usecase.dart';
 import 'package:flutter_music/features/domain/entities/playlist_entity.dart';
 import 'package:flutter_music/features/domain/entities/user_entity.dart';
-import 'package:flutter_music/features/domain/repositories/musics_repository.dart';
+import 'package:flutter_music/features/domain/repositories/playlists_repostiory.dart';
 
 class GetAllPlaylistsByUserUsecase
     implements Usecase<List<PlaylistEntity>, UserEntity> {
-  final IMusicsRepository repository;
+  final IPlaylistsRepository repository;
 
   GetAllPlaylistsByUserUsecase({required this.repository});
 
