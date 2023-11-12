@@ -90,10 +90,7 @@ void main() {
     // Assert
     verify(
       () => client.post(Back4appEndpoints.getAllPlaylistsByUser,
-          map: {
-            "playlistId": tPlaylistModel.id,
-          },
-          token: tUserModel.token),
+          map: {}, token: tUserModel.token),
     ).called(1);
   });
 
